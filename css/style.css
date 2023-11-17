@@ -1,4 +1,124 @@
+h1,h2,h3{
+	margin: 0;
+}
+h1{
+	color: white;
+	font-family: 'Montserrat';
+	font-size: 24px;
+}
+p{
+	font-family: 'Montserrat';
+	font-size: 17px;
+}
+li{
+	font-family: 'Montserrat';
+	font-size: 13px;
+}
 body{
     margin: 0;
 }
-    
+header{
+	background: rgb(47,128,237);
+}
+button{
+	border-radius: 6px;
+	border: none;
+	padding: 10px;
+	margin: 10px;
+	width: 120px;
+	background: rgb(47,128,237);
+	font-family: 'Montserrat';
+	color: white;
+	font-size: 14px;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+}
+li{
+	padding: 10px 0px;
+	margin: 10px 0px;
+	border-radius: 3px;
+	background: white;
+}
+.header_content{
+	padding: 30px 60px;
+}
+body{
+	background: rgb(238,244,251);
+}
+.tasks{
+	margin: 30px 40px;
+}
+.tasks_info{
+	background: white;
+	width: 321px;
+	padding: 10px;
+	border-radius: 12px;
+	padding: 19px;
+	
+}
+.tasks_info h1{
+	color: black;
+}
+.input_text_task{
+	font-family: 'Montserrat';
+	border: none;
+	box-shadow: 0px 0px 1px 0px;
+	height: 30px;
+	border-radius: 3px;
+}
+.lists{
+	display: flex	;
+}
+.description{
+	margin-right: auto;
+	margin-top: 40px;
+	width: 210px;
+	padding: 19px;
+}
+.lists p{
+	background: aliceblue;
+	text-align: center;
+	width: 110px;
+	padding: 15px;
+	border-radius: 18px;
+	margin-left: -10px;
+}
+.p_backlog{
+	background: rgba(73, 83, 92, 0.151) !important;
+	color: rgba(73, 83, 92) !important;
+}
+.p_process{
+	background: rgba(0, 6, 94, 0.151) !important;
+	color: rgba(0, 6, 94) !important;
+}
+.p_already{
+	background: rgba(140, 3, 238, 0.151) !important;
+	color: rgba(140, 3, 238) !important;
+
+}
+.p_trash{
+	background: rgb(155, 22, 57, 0.151) !important;
+	color: rgba(155, 22, 57) !important;
+}
+
+.ul_backlog li{
+	box-shadow: -3px 0 0 0 rgba(73, 83, 92);
+}
+.ul_process li{
+	box-shadow: -3px 0 0 0 rgba(0, 6, 94);
+}
+.ul_already li{
+	box-shadow: -3px 0 0 0 rgba(140, 3, 238);
+}
+.ul_trash li{
+	box-shadow: -3px 0 0 0 rgb(155, 22, 57);
+}
+:focus::-webkit-input-placeholder {
+  color: transparent
+}
+.delete_button{
+	background: rgb(155, 22, 57);
+    width: 200px;
+}

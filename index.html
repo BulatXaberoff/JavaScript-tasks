@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=dev  ice-width, initial-scale=1, minimum-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,41 +18,43 @@
 
   <main class="main">
     <section class="tasks">
-        <h1>Новая задача</h1>
         <div class="tasks_info">
-            <input>
-            <button class="button_add">Добавить</button>
+						<h1>Новая задача</h1>
+            <input class="input_text_task" placeholder="Напишите задачу">
+            <button class="button_add">+ Добавить</button>
         </div>
         <div class="lists">
-            <ul>
-                <div class="description">
-                    <p>Бэклог</p>
-                </div>
-                <li>Выучить JS</li>
-                <li>Выучить React</li>
-                <li>Сделать домашку</li>
-
-                <div class="description">
-                    <p>В процессе</p>
-                </div>
-                <li>Выпить смузи</li>
-                <li>Перестать тупить</li>
-
-
-                <div class="description">
-                    <p>Готово</p>
-                </div>
-                <li>Позвонить маме</li>
-                <li>Погладить Кекса</li>
-
-                <div class="description">
-                    <p>Корзина</p>
-                </div>
-                <li>Сходить</li>
-                <li>Погладить Кекса</li>
-                <li>Очистить</li>
-
-            </ul>
+					<div class="description">
+							<p class="p_backlog">Бэклог</p>
+							<ul class="ul_backlog">
+								<li>Выучить JS</li>
+								<li>Выучить React</li>
+								<li>Сделать домашку</li>
+							</ul>										
+						</div>
+					<div class="description">
+						<p class="p_process">В процессе</p>
+						<ul class="ul_process">
+							<li>Выпить смузи</li>
+              <li>Перестать тупить</li>
+						</ul>										
+					</div>
+					<div class="description">
+						<p class="p_already">Готово</p>
+						<ul class="ul_already">
+							<li>Позвонить маме</li>
+							<li>Погладить Кекса</li>
+						</ul>										
+					</div>
+					<div class="description">
+						<p class="p_trash">Корзина</p>
+						<ul class="ul_trash">
+							<li>Сходить</li>
+							<li>Погладить Кекса</li>
+							<li>Очистить</li>
+						</ul>					
+						<button class="delete_button">&#215; Очистить</button>					
+					</div>
         </div>
     </section>
   </main>
