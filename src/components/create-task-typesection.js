@@ -1,5 +1,5 @@
 import {CreateTaskComponent} from './add-task.js'
-import {TasksService} from '../services/service.js'
+import {TasksService} from '../services/GetTaskService.js'
 
 
 
@@ -16,10 +16,10 @@ const AddTaskComponents = () => {
 
     var resultComponent = '';
 
-    var BackLogComponent = `<p class="p_backlog" id = "BackLog">Бэклог</p> <ul class="ul_backlog">`;
-    var InWorkComponent = `<p class="p_process" id = "InWork">В процессе</p> <ul class="ul_process">`;
-    var TestingComponent = `<p class="p_already" id = "Testing">Готово</p> <ul class="ul_already">`;
-    var BucketComponent = `<p class="p_trash" id = "Bucket">Корзина</p> <ul class="ul_trash">`;
+    var BackLogComponent = `<div class="description" id = "BackLog">Бэклог</div>`;
+    var InWorkComponent = `<div class="description" id = "InWork">В работе</div>`;
+    var TestingComponent = `<div class="description" id = "Testing">На тестировании</div>`;
+    var BucketComponent = `<div class="description" id = "Bucket">Корзина</div>`;
 
     var components = [BackLogComponent, InWorkComponent, TestingComponent, BucketComponent]
 
@@ -39,17 +39,12 @@ const AddTaskComponents = () => {
           components[3] += `${AddTask(task.id, task.title, task.status)}`
           break;
           
-      } 
-      
+      }  
     })
-    components[0] +=`</ul>`;
-    components[1] +=`</ul>`;
-    components[2] +=`</ul>`;
-    components[3] +=`</ul> <button class="delete_button">&#215; Очистить</button>`;
 
     components.forEach(component => {
         const newElement = document.createElement('div');
-        newElement.className = 'description';
+        newElement.className = 'lists';
         newElement.innerHTML = component;
 
         resultComponent += newElement.outerHTML;

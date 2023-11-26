@@ -1,26 +1,46 @@
-import {createElement} from '../render.js';
-function createboardListsTaskComponentTemplate() {
-    return (
-        `<ul class="ul_backlog">
-            <li>Выучить JS</li>
-        </ul>`
-      );
+function createTaskComponentTemplate(id, text, taskType) {
+  return (
+    changeTaskText(text, taskType)
+  );
+}
+
+const changeTaskText = (text, taskType) => {
+
+  return(`
+  <li class="Task" id= "${taskType}">${text}`)
 }
 
 
-export class TaskComponent {
-  getTemplate() {
-    return createboardListsTaskComponentTemplate();
-  }
+export class CreateTaskComponent {
+
+#id = null;
+#status = null;
+#title = null;
 
 
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-    return this.element;
+constructor({id, title,status}){
+  this.#id = id;
+  this.#status = status;
+  this.#title = title;
 }
-  removeElement() {
-    this.element = null;
+
+
+getTemplate() {
+  return createTaskComponentTemplate(this.#id, this.#title, this.#status);
+}
+
+
+getElement() {
+  if (!this.element) {
+    this.element = createElement(this.getTemplate());
   }
+
+
+  return this.element;
+}
+
+
+removeElement() {
+  this.element = null;
+}
 }
