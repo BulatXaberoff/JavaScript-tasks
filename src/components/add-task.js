@@ -1,15 +1,14 @@
 import {createElement} from '../render.js';
 function createboardListsTaskComponentTemplate() {
     return (
-        `<div class="description">
-            <p class="p_backlog">Бэклог</p>
-            										
-        </div>`
+        `<ul class="ul_backlog">
+            <li>Выучить JS</li>
+        </ul>`
       );
 }
 
 
-export class ListsAddTaskComponent {
+export class TaskComponent {
   getTemplate() {
     return createboardListsTaskComponentTemplate();
   }
