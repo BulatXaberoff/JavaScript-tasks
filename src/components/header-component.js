@@ -1,5 +1,5 @@
 import {createElement} from '../render.js';
-
+import {AbstractComponent} from './abstractcomponent.js'
 
 function createHeaderComponentTemplate() {
     return (
@@ -12,20 +12,9 @@ function createHeaderComponentTemplate() {
 }
 
 
-export class HeaderComponent {
+export class HeaderComponent extends AbstractComponent {
   getTemplate() {
     return createHeaderComponentTemplate();
-  }
-
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-    return this.element;
-  }
-  removeElement() {
-    this.element = null;
   }
 
 }

@@ -1,4 +1,5 @@
 import {CreateTaskTypeSectionComponent} from './add-list-tasks.js';
+import {AbstractComponent} from './abstractcomponent.js'
 
 const CreateTaskTypeSection = new CreateTaskTypeSectionComponent();
 
@@ -10,23 +11,9 @@ function createTaskBoardComponentTemplate() {
     );
 }
 
-export class CreateTaskBoardComponent {
+export class CreateTaskBoardComponent extends AbstractComponent{
   getTemplate() {
     return createTaskBoardComponentTemplate();
-  }
-
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-
-    return this.element;
-  }
-
-
-  removeElement() {
-    this.element = null;
   }
 }
 
