@@ -5,8 +5,6 @@ export class AbstractComponent {
     }
     this._element = null;
   }
-
-
   getTemplate() {
     throw new Error(`It's AbstractComponent method, please implement it! `);
   }

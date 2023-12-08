@@ -41,6 +41,12 @@ ul{
 	border-radius: 3px;
 	background: white;
 }
+.Empty_Task{
+	padding: 10px 0px;
+	margin: 10px 0px;
+	border-radius: 3px;
+	background: white;
+}
 .header_content{
 	padding: 30px 60px;
 }
@@ -121,4 +127,8 @@ body{
 .delete_button{
 	background: rgb(155, 22, 57);
     width: 200px;
+}	
+
+.ul_backlog .Empty_Task{
+	box-shadow: -3px 0 0 0 rgba(0, 6, 94);
 }

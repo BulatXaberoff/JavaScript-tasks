@@ -1,4 +1,3 @@
-import {createElement} from '../render.js';
 import {AbstractComponent} from './abstractcomponent.js'
 
 function createHeaderComponentTemplate() {
